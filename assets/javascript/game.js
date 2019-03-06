@@ -36,3 +36,25 @@ var questions = [ {
 
 console.log(questions[10].a)
 
+function questionDisplay(array, i) {
+    let question = array[i].q;
+    $("#questionDiv").append(question)
+}
+
+function questionPicker(min,max) 
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+$("#startButton").on("click", function(event){
+        startGame();
+    })
+
+
+function startGame() {
+    // setTimeout(endGame, 1000 * 60);
+    console.log("yous started the game!")
+    $("#startButton").hide();
+
+    questionDisplay(questions, questionPicker(0,questions.length))
+}

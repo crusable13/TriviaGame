@@ -12,4 +12,4 @@ Load player answer and increase either correct or incorrect variable
 
 Display questions until timer is up, then run gameOver function
 
-Offer a button to play again
+Offer a button to play againss
