@@ -1,0 +1,15 @@
+Display Instructions
+
+Show start button
+
+Start timer upon click
+
+Display first question
+
+Take either a true "t" or a false "f" as an answer.
+
+Load player answer and increase either correct or incorrect variable
+
+Display questions until timer is up, then run gameOver function
+
+Offer a button to play again
