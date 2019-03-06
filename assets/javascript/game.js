@@ -34,13 +34,27 @@ var questions = [ {
 }
 ]
 
-console.log(questions[10].a)
+let userAnswer = "";
+
+var winCounter = 0;
+var lossCounter = 0;
 
 function questionDisplay(array, i) {
     let question = array[i].q;
     $("#questionDiv").append(question)
 }
 
+function isTrue(string) {
+    if (string == "t") {
+        console.log("true");
+        return true;
+        
+    } else if (string == "f") {
+       console.log("false"); 
+       return false;
+        
+    }
+}
 function questionPicker(min,max) 
 {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -51,10 +65,17 @@ $("#startButton").on("click", function(event){
     })
 
 
+
 function startGame() {
     // setTimeout(endGame, 1000 * 60);
     console.log("yous started the game!")
     $("#startButton").hide();
 
     questionDisplay(questions, questionPicker(0,questions.length))
+}
+
+document.onkeyup = function(event) {
+    userAnswer = event.key;
+    console.log(userAnswer);
+    isTrue(userAnswer)
 }
